@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
-var users = require('../controllers/users.js');
+var pub = require('../controllers/publishers.js');
 
 router.get('/', function(req, res, next) {
-  users.getAllUsers(function(data) {
+  pub.getAllPublishers(function(data) {
     return res.json(data);
   });
 });

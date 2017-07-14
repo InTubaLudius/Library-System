@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
-var users = require('../controllers/users.js');
+var authors = require('../controllers/authors.js');
 
 router.get('/', function(req, res, next) {
-  users.getAllUsers(function(data) {
+  authors.getAllAuthors(function(data) {
     return res.json(data);
   });
 });
