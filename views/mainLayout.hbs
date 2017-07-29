@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.25/css/uikit.min.css" />
+
+    <!-- jQuery -->
+    <script src="/js/jquery/jquery-3.2.1.min.js"></script>
+
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.25/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.25/js/uikit-icons.min.js"></script>
+
+    <!-- Catalogue JS -->
+    <script src"/js/catalogue.js"></script>
+  </head>
+
+  <body>
+    <div>
+      <nav class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar-left">
+          <a class="uk-navbar-item uk-logo" href='/app'>Library</a>
+
+          <ul class="uk-navbar-nav">
+            <li>
+              <a class="uk-navbar-item">Catalogue</a>
+
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li><a href="/app/catalogue">List</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a class="uk-navbar-item">Loans</a>
+
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li><a href="#">Add Loans</a></li>
+                  <li><a href="#">List Loans</a></li>
+                </ul>
+              </div>
+
+            </li>
+          </ul>
+
+        </div>
+
+        <div class="uk-navbar-right">
+          <ul class="uk-navbar-nav">
+            <li>
+              <a class="uk-navbar-item">Account</a>
+
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li><a href="#account" uk-toggle>Overview</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div id="account" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-width-1-2">
+          <button class="uk-modal-close-default" type="button" uk-close></button>
+          <h2 class="uk-modal-title">Your Account</h2>
+          <p></p>
+        </div>
+      </div>
+
+      {{{body}}}
+    </div>
+  </body>
+
+</html>
